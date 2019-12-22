@@ -18,7 +18,7 @@ jobs:
       rvm:
         - 2.4.1
       script: ./deploy.sh
-      if: branch = master AND type = push
+      if: branch = hotfix/themes AND type = push
       cache: bundler
 
 env:
