@@ -1835,7 +1835,7 @@ class BootstrapTable {
     })
 
     this.horizontalScroll()
-    this.trigger('post-header')
+    this.trigger('post-header', this.$tableHeader)
   }
 
   initFooter () {
@@ -2606,7 +2606,7 @@ class BootstrapTable {
       padding += this.$header.outerHeight(true) + 1
     } else {
       this.$tableHeader.hide()
-      this.trigger('post-header')
+      this.trigger('post-header', this.$tableHeader)
     }
 
     if (!this.options.cardView && this.options.showFooter) {

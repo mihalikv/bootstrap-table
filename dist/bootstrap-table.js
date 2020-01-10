@@ -5632,7 +5632,7 @@
 	        $th.find('.fht-cell').width($this.innerWidth() - zoomWidth);
 	      });
 	      this.horizontalScroll();
-	      this.trigger('post-header');
+	      this.trigger('post-header', this.$tableHeader);
 	    }
 	  }, {
 	    key: "initFooter",
@@ -6619,7 +6619,7 @@
 	        padding += this.$header.outerHeight(true) + 1;
 	      } else {
 	        this.$tableHeader.hide();
-	        this.trigger('post-header');
+	        this.trigger('post-header', this.$tableHeader);
 	      }
 
 	      if (!this.options.cardView && this.options.showFooter) {
